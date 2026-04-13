@@ -1,0 +1,105 @@
+#include <stdio.h>
+int main(){
+	
+	int opcao = -1;
+	
+	while (opcao != 0){
+		printf("1-Ver nota de 0 a 100\n");
+		printf("2-Ver consumo mensal em kWm\n");
+		printf("3-Leitor de triangulo\n");
+		printf("0-Sair\n");
+		printf("Digite sua opcao correspondente: ");
+		scanf("%d",&opcao);
+	
+		switch (opcao){
+			case 1:{
+				int nota;
+				printf("Qual foi sua nota de 0 a 100?: ");
+				scanf("%d",&nota);
+				if (nota <= 100 && nota >= 90){
+					printf("Voce tirou uma nota A!\n");
+				}
+				else if (nota <= 89 && nota >= 80){
+					printf("Voce tirou uma nota B!\n");
+				}
+				else if (nota <= 79 && nota >= 70){
+					printf("Voce tirou uma nota C!\n");
+				}
+				else if (nota <= 69 && nota >= 60){
+					printf("Voce tirou uma nota D!\n");
+				}
+				else if (nota <= 59 && nota >= 0){
+					printf("Voce tirou uma nota F!\n");
+				}
+				break;
+				
+		}
+			case 2:{
+				float consumo;
+				
+				printf("Qual foi seu consumo desse mes?: ");
+				scanf("%f",&consumo);
+				
+				if (consumo >= 0 && consumo <= 100){
+					printf("Voce tera que pagar %.2f\n",consumo * 0.5);
+				}
+				else if (consumo >= 101 && consumo <= 200){
+					printf("Voce tera que pagar %.2f\n",consumo * 0.75);
+				}
+				else if (consumo >= 201 && consumo <= 500){
+					printf("Voce tera que pagar %.2f\n",consumo * 1.2);
+				}
+				else if (consumo > 500){
+					printf("Voce tera que pagar %.2f\n",consumo * 1.5);
+				}
+				else{
+					printf("Consumo invalido\n");
+				}
+				break;
+			}
+			case 3:{
+				
+				float a, b, c;
+				
+				printf("Digite os tres lados de um triangulo: ");
+				scanf("%f %f %f",&a,&b,&c);
+				
+				if (a < b + c){
+					if (b < a + b){
+						if (c < a + b){
+							
+							if (a == b && b == c){
+								printf("Triangulo equilatero\n");
+							}
+							else if (a == b || a == c || b == c){
+								printf("Triangulo isoceles");
+							}
+							else{
+								printf("Triangulo escaleno\n");
+							}
+						} else{
+							printf("Nao forma um triangulo\n");
+						}
+					} else{
+							printf("Nao forma um triangulo\n");
+						}
+				} else{
+							printf("Nao forma um triangulo\n");
+						}
+				
+				break;
+			
+			case 0:{
+				if (opcao == 0){
+					printf("Saindo...");
+				}
+				break;
+			}
+			}
+			default:
+					printf("Opcao invalida.");
+	}
+}
+
+return 0;
+}
