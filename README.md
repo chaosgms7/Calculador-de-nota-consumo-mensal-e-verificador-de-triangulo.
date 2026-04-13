@@ -1,2 +1,2 @@
-# Calculador-de-nota-consumo-mensal-e-verificador-de-triangulo.
+# Calculador-de-nota-consumo-mensal-e-verificador-de-triangulo.c
 Projeto simples em linguagem de programação C utilizando como função principal a estrutura de repetição "while" fazendo um menu com 3 opções, ver nota de 0 a 100 dando um valor correspondente de A a F, calcular o valor a ser pago a partir do consumo de kWh e um verificador de triangulo a partir de 3 valores indicando o tipo de triangulo.
